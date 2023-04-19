@@ -31,14 +31,14 @@ contract("NFTFarm", ([owner, investor]) => {
   ];
   before(async () => {
     // Load Contracts
-    usdcToken = await USDCToken.new("Mock DAI Token", "mDAI");
+    usdcToken = await USDCToken.new("Mock USDC Token", "mUSDC");
     crops = await Crops.new();
     nftFarm = await NFTFarm.new(emissionRate, usdcToken.address, crops.address);
     // Send tokens to investor
     await usdcToken.transfer(investor, tokens("100"), { from: owner });
   });
 
-  describe("Deployment", async () => {
+  describe("Deployment ", async () => {
     it("tracks emision rate", async () => {
       const result = await nftFarm.emissionRate();
       result.toString().should.equal(emissionRate.toString());
@@ -47,7 +47,7 @@ contract("NFTFarm", ([owner, investor]) => {
       const result = await nftFarm.crops();
       result.should.equal(crops.address);
     });
-    it("tracks mDai token address", async () => {
+    it("tracks mUSDC token address", async () => {
       const result = await nftFarm.token();
       result.should.equal(usdcToken.address);
     });
@@ -61,7 +61,7 @@ contract("NFTFarm", ([owner, investor]) => {
       assert.equal(
         result.toString(),
         tokens("100"),
-        "investor Mock DAI wallet balance correct before staking"
+        "investor Mock USDC wallet balance correct before staking"
       );
 
       // Owner adds NFTs to farm
