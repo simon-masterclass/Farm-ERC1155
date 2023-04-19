@@ -5,7 +5,7 @@ import { useRef } from "react";
 import dai from "../dai.png";
 
 const Main = ({
-  daiTokenBalance,
+  usdcTokenBalance,
   pointsBalance,
   stakingBalance,
   stakeTokens,
@@ -33,7 +33,7 @@ const Main = ({
                 <b>Stake Tokens</b>
               </label>
               <span className="float-end">
-                Balance: {ethers.utils.formatUnits(daiTokenBalance, "ether")}
+                Balance: {ethers.utils.formatUnits(usdcTokenBalance, "ether")}
               </span>
             </div>
             <div className="input-group mb-4">
@@ -51,7 +51,7 @@ const Main = ({
                     height="32"
                     alt=""
                   />
-                  &nbsp;&nbsp;&nbsp; mDAI
+                  &nbsp;&nbsp;&nbsp; mUSDC
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Main = ({
         </thead>
         <tbody>
           <tr>
-            <td>{ethers.utils.formatUnits(stakingBalance, "ether")} mDAI</td>
+            <td>{ethers.utils.formatUnits(stakingBalance, "ether")} mUSDC</td>
             <td>{pointsBalance} points</td>
           </tr>
         </tbody>
