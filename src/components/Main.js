@@ -2,7 +2,7 @@
 
 import { ethers } from "ethers";
 import { useRef } from "react";
-import dai from "../dai.png";
+import usdcLogo from "../usdc.svg";
 
 const Main = ({
   usdcTokenBalance,
@@ -47,7 +47,7 @@ const Main = ({
               <div className="input-group-append">
                 <div className="input-group-text">
                   <img
-                    src={dai}
+                    src={usdcLogo}
                     height="32"
                     alt=""
                   />
