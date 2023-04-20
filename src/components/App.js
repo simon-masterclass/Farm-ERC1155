@@ -153,6 +153,7 @@ function App() {
     setAccount(accounts[0]);
     setNetworkId(window.ethereum.networkVersion);
   };
+
   useEffect(() => {
     if (networkId) {
       loadWeb3();

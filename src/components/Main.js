@@ -71,7 +71,7 @@ const Main = ({
                 event.preventDefault();
                 unstakeTokens();
               }}>
-              UN-STAKE...
+              UN-STAKE
             </button>
           </div>
         </div>
