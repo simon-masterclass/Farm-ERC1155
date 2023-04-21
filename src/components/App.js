@@ -168,7 +168,7 @@ function App() {
 
   const stakeTokens = async (amount) => {
     setLoading(true);
-    setMessage("Loading..");
+    setMessage("Loading...");
     await usdcToken.approve(nftFarm.address, amount);
     const result = await nftFarm.stakeTokens(amount);
     await result.wait();
