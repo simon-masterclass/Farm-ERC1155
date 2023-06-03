@@ -3,7 +3,7 @@ pragma solidity ^0.8.10;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 contract Crops is ERC1155("https://ipfs.io/ipfs/bafybeicvfevtm5hi33guhypkfw4gv2upabhsltcfysvydbsbcgmruj2w5q") {
-    uint256 public constant CARROT = 0;
+    uint256 public constant CARROT = 1;
     uint256 public constant POTATO = 1;
     uint256 public constant CORN = 2;
     uint256 public constant GOLDEN_CARROT = 3;
